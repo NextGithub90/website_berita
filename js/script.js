@@ -401,6 +401,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     let categoryQuery = urlParams.get("type");
 
+    if (!categoryQuery) {
+      if (window.location.pathname.includes("ekonomi.html"))
+        categoryQuery = "Ekonomi";
+      else if (window.location.pathname.includes("bisnis.html"))
+        categoryQuery = "Bisnis";
+      else if (window.location.pathname.includes("teknologi.html"))
+        categoryQuery = "Teknologi";
+    }
+
     if (categoryQuery) {
       const displayTitle = decodeURIComponent(categoryQuery).replace(/-/g, " ");
       catTitle.textContent = displayTitle;
