@@ -1,0 +1,159 @@
+/* Custom Styles outside of Tailwind configs */
+
+/* Ticker Animation */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+
+.ticker-move {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation: ticker 40s linear infinite;
+}
+
+.ticker-move:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.left-shadow::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: linear-gradient(
+    to right,
+    rgba(27, 58, 122, 1),
+    rgba(27, 58, 122, 0)
+  );
+}
+
+/* Hide scrollbar for category links */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Base styles for Prose typography */
+.prose p {
+  margin-bottom: 1.5em;
+  color: #475569;
+}
+.prose strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* ===========================
+   MOBILE RESPONSIVE OVERRIDES
+   =========================== */
+
+/* Smooth horizontal scroll for pills/cards */
+.snap-x {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.snap-x > * {
+  scroll-snap-align: start;
+}
+
+/* Quick links pill bar - mobile */
+.quick-links-pill {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 6px 14px;
+  background: #f1f5f9;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1b3a7a;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  flex-shrink: 0;
+}
+.quick-links-pill:hover,
+.quick-links-pill.active {
+  background: #ed1b24;
+  color: #fff;
+}
+
+/* Mobile card article list - thumb left, text right */
+@media (max-width: 767px) {
+  /* Global mobile padding reduction */
+  .section-mobile-pad {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Hero section on mobile: stacked */
+  #hero-left {
+    display: none !important;
+  }
+
+  /* More news dark section: single column on mobile */
+  #more-news-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Economy scroll: reduce card width */
+  #economy-container a {
+    width: 220px !important;
+  }
+
+  /* Business focus top: single col on small */
+  #business-focus-top {
+    grid-template-columns: 1fr !important;
+  }
+  #business-focus-bottom {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Just-in grid: single column on mobile */
+  #just-in-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* What to read container: stack */
+  #what-to-read-container {
+    flex-direction: column !important;
+  }
+
+  /* Featured grid: single column on mobile */
+  #featured-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Improve touch targets for nav items */
+  .mobile-menu a {
+    min-height: 48px;
+  }
+}
+
+/* Mobile sticky header fix - ensure proper height */
+@media (max-width: 1023px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+}

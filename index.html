@@ -1,0 +1,1463 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORES - Forum Strategis Pembangunan Sosial - Berita Terkini</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              foxizBlue: "#051DB3",
+              foxizRed: "#ED1B24",
+              foxizGold: "#FFDF00",
+              foxizDark: "#121212",
+              foxizGray: "#F5F5F5",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              head: ["Manrope", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .card-gradient {
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.85) 0%,
+          rgba(0, 0, 0, 0.2) 50%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-800 antialiased overflow-x-hidden font-sans">
+    <!-- ========== STICKY HEADER ========== -->
+    <header
+      class="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50"
+    >
+      <div
+        class="max-w-[1440px] mx-auto px-4 lg:px-6 h-[60px] lg:h-[90px] xl:h-[110px] flex items-center justify-between relative"
+      >
+        <!-- LEFT: Hamburger (mobile only) -->
+        <button
+          class="lg:hidden text-[#1B3A7A] focus:outline-none flex-shrink-0 p-1"
+          id="mobile-menu-btn"
+        >
+          <svg
+            class="w-7 h-7"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- CENTER: Logo (mobile) / LEFT logo (desktop) -->
+        <a
+          href="index.html"
+          class="flex items-center h-full py-2 lg:py-3 mx-auto lg:mx-0 overflow-hidden"
+        >
+          <img
+            src="img/logo/logo.jpeg"
+            alt="FORES Logo"
+            class="h-[42px] lg:h-[60px] xl:h-[75px] w-auto object-contain"
+          />
+        </a>
+
+        <!-- DESKTOP: Full Nav + Actions (hidden on mobile) -->
+        <div
+          class="hidden lg:flex items-center flex-1 ml-8 xl:ml-12 justify-between h-full"
+        >
+          <!-- Main Nav Links -->
+          <nav
+            class="flex items-center space-x-5 xl:space-x-8 font-extrabold text-[14px] xl:text-[15px] tracking-wide text-[#1B3A7A] h-full"
+          >
+            <a
+              href="category.html?type=Ekonomi"
+              class="px-4 py-2 bg-[#050714] text-white rounded-[8px] hover:bg-opacity-80 transition-colors text-sm"
+              >Home</a
+            >
+
+            <!-- EKONOMI Megamenu -->
+            <div class="group h-full flex items-center relative">
+              <a
+                href="category.html?type=Ekonomi"
+                class="hover:text-[#C9A227] transition-colors flex items-center gap-1 h-full cursor-pointer"
+              >
+                Ekonomi
+                <svg
+                  class="w-4 h-4 text-gray-400 group-hover:text-[#1B3A7A] transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </a>
+              <div
+                class="absolute top-full left-0 w-[960px] xl:w-[1060px] -left-[100px] xl:-left-[150px] bg-[#050714] rounded-b-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6 border-t-2 border-foxizRed pointer-events-none group-hover:pointer-events-auto"
+              >
+                <div
+                  class="flex justify-between items-center mb-5 pb-3 border-b border-gray-800"
+                >
+                  <h3 class="text-white font-head font-bold text-xl">
+                    Ekonomi
+                  </h3>
+                  <a
+                    href="category.html?type=Ekonomi"
+                    class="text-gray-400 hover:text-white transition-colors text-sm font-medium flex items-center gap-1"
+                    >Show More
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path></svg
+                  ></a>
+                </div>
+                <div class="grid grid-cols-4 gap-5">
+                  <div class="flex flex-col group/card cursor-pointer">
+                    <div
+                      class="rounded-lg overflow-hidden mb-3 aspect-[4/3] bg-gray-800"
+                    >
+                      <img
+                        src="img/news/economy-1.jpg"
+                        alt=""
+                        class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                        onerror="
+                          this.src =
+                            'https://plus.unsplash.com/premium_photo-1661389851610-d86cf5579978?auto=format&fit=crop&q=80&w=600'
+                        "
+                      />
+                    </div>
+                    <h4
+                      class="text-white font-bold text-[14px] mb-2 group-hover/card:text-[#C9A227] transition-colors line-clamp-3"
+                    >
+                      5 Ways Small Businesses Can Thrive in a Challenging
+                      Economy
+                    </h4>
+                    <span
+                      class="text-gray-400 text-[11px] font-bold uppercase mt-auto"
+                      >RENEWABLE ENERGY</span
+                    >
+                  </div>
+                  <div class="flex flex-col group/card cursor-pointer">
+                    <div
+                      class="rounded-lg overflow-hidden mb-3 aspect-[4/3] bg-gray-800"
+                    >
+                      <img
+                        src="img/news/economy-2.jpg"
+                        alt=""
+                        class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                        onerror="
+                          this.src =
+                            'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=600'
+                        "
+                      />
+                    </div>
+                    <h4
+                      class="text-white font-bold text-[14px] mb-2 group-hover/card:text-[#C9A227] transition-colors line-clamp-3"
+                    >
+                      What Is a Recession, Really? And Should You Be Worried?
+                    </h4>
+                    <span
+                      class="text-gray-400 text-[11px] font-bold uppercase mt-auto"
+                      >CLIMATE CHANGE</span
+                    >
+                  </div>
+                  <div class="flex flex-col group/card cursor-pointer">
+                    <div
+                      class="rounded-lg overflow-hidden mb-3 aspect-[4/3] bg-gray-800"
+                    >
+                      <img
+                        src="img/news/hero-main.jpg"
+                        alt=""
+                        class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                        onerror="
+                          this.src =
+                            'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=600'
+                        "
+                      />
+                    </div>
+                    <h4
+                      class="text-white font-bold text-[14px] mb-2 group-hover/card:text-[#C9A227] transition-colors line-clamp-3"
+                    >
+                      Cryptocurrency vs Traditional Banking: Who Wins in the
+                      Long Run?
+                    </h4>
+                    <span
+                      class="text-gray-400 text-[11px] font-bold uppercase mt-auto"
+                      >FINANCE</span
+                    >
+                  </div>
+                  <div class="flex flex-col group/card cursor-pointer">
+                    <div
+                      class="rounded-lg overflow-hidden mb-3 aspect-[4/3] bg-gray-800"
+                    >
+                      <img
+                        src="img/news/what-read.jpg"
+                        alt=""
+                        class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                        onerror="
+                          this.src =
+                            'https://images.unsplash.com/photo-1542744094-24638ea89614?auto=format&fit=crop&q=80&w=600'
+                        "
+                      />
+                    </div>
+                    <h4
+                      class="text-white font-bold text-[14px] mb-2 group-hover/card:text-[#C9A227] transition-colors line-clamp-3"
+                    >
+                      Universal Basic Income: Bold Idea or Economic Risk?
+                    </h4>
+                    <span
+                      class="text-gray-400 text-[11px] font-bold uppercase mt-auto"
+                      >FEATURED</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BISNIS Megamenu -->
+            <div class="group h-full flex items-center relative">
+              <a
+                href="category.html?type=Ekonomi"
+                class="hover:text-[#C9A227] transition-colors flex items-center gap-1 h-full cursor-pointer"
+              >
+                Bisnis
+                <svg
+                  class="w-4 h-4 text-gray-400 group-hover:text-[#1B3A7A] transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </a>
+              <div
+                class="absolute top-full left-0 w-[960px] xl:w-[1060px] -left-[180px] xl:-left-[250px] bg-[#050714] rounded-b-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6 border-t-2 border-foxizRed pointer-events-none group-hover:pointer-events-auto"
+              >
+                <div
+                  class="flex justify-between items-center mb-5 pb-3 border-b border-gray-800"
+                >
+                  <h3 class="text-white font-head font-bold text-xl">Bisnis</h3>
+                  <a
+                    href="category.html?type=Bisnis"
+                    class="text-gray-400 hover:text-white transition-colors text-sm font-medium flex items-center gap-1"
+                    >Show More
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path></svg
+                  ></a>
+                </div>
+                <div class="grid grid-cols-4 gap-5">
+                  <div class="flex flex-col group/card cursor-pointer">
+                    <div
+                      class="rounded-lg overflow-hidden mb-3 aspect-[4/3] bg-gray-800"
+                    >
+                      <img
+                        src="img/news/biz-1.jpg"
+                        alt=""
+                        class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                        onerror="
+                          this.src =
+                            'https://plus.unsplash.com/premium_photo-1661389851610-d86cf5579978?auto=format&fit=crop&q=80&w=600'
+                        "
+                      />
+                    </div>
+                    <h4
+                      class="text-white font-bold text-[14px] mb-2 group-hover/card:text-[#C9A227] transition-colors line-clamp-3"
+                    >
+                      Strategi Korporasi Menghadapi Inflasi Global di Tahun 2026
+                    </h4>
+                    <span
+                      class="text-gray-400 text-[11px] font-bold uppercase mt-auto"
+                      >CORPORATE</span
+                    >
+                  </div>
+                  <div class="flex flex-col group/card cursor-pointer">
+                    <div
+                      class="rounded-lg overflow-hidden mb-3 aspect-[4/3] bg-gray-800"
+                    >
+                      <img
+                        src="img/news/biz-2.jpg"
+                        alt=""
+                        class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                        onerror="
+                          this.src =
+                            'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=600'
+                        "
+                      />
+                    </div>
+                    <h4
+                      class="text-white font-bold text-[14px] mb-2 group-hover/card:text-[#C9A227] transition-colors line-clamp-3"
+                    >
+                      Mengapa Banyak Startup Raksasa Melakukan PHK Massal?
+                    </h4>
+                    <span
+                      class="text-gray-400 text-[11px] font-bold uppercase mt-auto"
+                      >TECH</span
+                    >
+                  </div>
+                  <div class="flex flex-col group/card cursor-pointer">
+                    <div
+                      class="rounded-lg overflow-hidden mb-3 aspect-[4/3] bg-gray-800"
+                    >
+                      <img
+                        src="img/news/featured-2.jpg"
+                        alt=""
+                        class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                        onerror="
+                          this.src =
+                            'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=600'
+                        "
+                      />
+                    </div>
+                    <h4
+                      class="text-white font-bold text-[14px] mb-2 group-hover/card:text-[#C9A227] transition-colors line-clamp-3"
+                    >
+                      Investasi Properti atau Emas: Mana yang Lebih Menjanjikan?
+                    </h4>
+                    <span
+                      class="text-gray-400 text-[11px] font-bold uppercase mt-auto"
+                      >INVESTMENT</span
+                    >
+                  </div>
+                  <div class="flex flex-col group/card cursor-pointer">
+                    <div
+                      class="rounded-lg overflow-hidden mb-3 aspect-[4/3] bg-gray-800"
+                    >
+                      <img
+                        src="img/news/more-1.jpg"
+                        alt=""
+                        class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                        onerror="
+                          this.src =
+                            'https://images.unsplash.com/photo-1542744094-24638ea89614?auto=format&fit=crop&q=80&w=600'
+                        "
+                      />
+                    </div>
+                    <h4
+                      class="text-white font-bold text-[14px] mb-2 group-hover/card:text-[#C9A227] transition-colors line-clamp-3"
+                    >
+                      Dinamika Pasar Saham Nasional Pasca Pemilu
+                    </h4>
+                    <span
+                      class="text-gray-400 text-[11px] font-bold uppercase mt-auto"
+                      >FINANCE</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TEKNOLOGI Megamenu -->
+            <div class="group h-full flex items-center relative">
+              <a
+                href="category.html?type=Bisnis"
+                class="hover:text-[#C9A227] transition-colors flex items-center gap-1 h-full cursor-pointer"
+              >
+                Teknologi
+                <svg
+                  class="w-4 h-4 text-gray-400 group-hover:text-[#1B3A7A] transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </a>
+              <div
+                class="absolute top-full left-0 w-[960px] xl:w-[1060px] -left-[260px] xl:-left-[350px] bg-[#050714] rounded-b-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6 border-t-2 border-foxizRed pointer-events-none group-hover:pointer-events-auto"
+              >
+                <div
+                  class="flex justify-between items-center mb-5 pb-3 border-b border-gray-800"
+                >
+                  <h3 class="text-white font-head font-bold text-xl">
+                    Teknologi
+                  </h3>
+                  <a
+                    href="category.html?type=Teknologi"
+                    class="text-gray-400 hover:text-white transition-colors text-sm font-medium flex items-center gap-1"
+                    >Show More
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path></svg
+                  ></a>
+                </div>
+                <div class="grid grid-cols-4 gap-5">
+                  <div class="flex flex-col group/card cursor-pointer">
+                    <div
+                      class="rounded-lg overflow-hidden mb-3 aspect-[4/3] bg-gray-800"
+                    >
+                      <img
+                        src="img/news/tech-1.jpg"
+                        alt=""
+                        class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                        onerror="
+                          this.src =
+                            'https://plus.unsplash.com/premium_photo-1661389851610-d86cf5579978?auto=format&fit=crop&q=80&w=600'
+                        "
+                      />
+                    </div>
+                    <h4
+                      class="text-white font-bold text-[14px] mb-2 group-hover/card:text-[#C9A227] transition-colors line-clamp-3"
+                    >
+                      Masa Depan AI: Bagaimana Kecerdasan Buatan Mengubah Cara
+                      Kita Berpikir
+                    </h4>
+                    <span
+                      class="text-gray-400 text-[11px] font-bold uppercase mt-auto"
+                      >AI / TECH</span
+                    >
+                  </div>
+                  <div class="flex flex-col group/card cursor-pointer">
+                    <div
+                      class="rounded-lg overflow-hidden mb-3 aspect-[4/3] bg-gray-800"
+                    >
+                      <img
+                        src="img/news/tech-2.jpg"
+                        alt=""
+                        class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                        onerror="
+                          this.src =
+                            'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=600'
+                        "
+                      />
+                    </div>
+                    <h4
+                      class="text-white font-bold text-[14px] mb-2 group-hover/card:text-[#C9A227] transition-colors line-clamp-3"
+                    >
+                      Review Lengkap Teknologi Layar Lipat Generasi Terbaru
+                    </h4>
+                    <span
+                      class="text-gray-400 text-[11px] font-bold uppercase mt-auto"
+                      >GADGETS</span
+                    >
+                  </div>
+                  <div class="flex flex-col group/card cursor-pointer">
+                    <div
+                      class="rounded-lg overflow-hidden mb-3 aspect-[4/3] bg-gray-800"
+                    >
+                      <img
+                        src="img/news/tech-3.jpg"
+                        alt=""
+                        class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                        onerror="
+                          this.src =
+                            'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=600'
+                        "
+                      />
+                    </div>
+                    <h4
+                      class="text-white font-bold text-[14px] mb-2 group-hover/card:text-[#C9A227] transition-colors line-clamp-3"
+                    >
+                      Keamanan Siber di Era Digital: Ancaman Masa Depan
+                    </h4>
+                    <span
+                      class="text-gray-400 text-[11px] font-bold uppercase mt-auto"
+                      >SECURITY</span
+                    >
+                  </div>
+                  <div class="flex flex-col group/card cursor-pointer">
+                    <div
+                      class="rounded-lg overflow-hidden mb-3 aspect-[4/3] bg-gray-800"
+                    >
+                      <img
+                        src="img/news/featured-4.jpg"
+                        alt=""
+                        class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
+                        onerror="
+                          this.src =
+                            'https://images.unsplash.com/photo-1542744094-24638ea89614?auto=format&fit=crop&q=80&w=600'
+                        "
+                      />
+                    </div>
+                    <h4
+                      class="text-white font-bold text-[14px] mb-2 group-hover/card:text-[#C9A227] transition-colors line-clamp-3"
+                    >
+                      Perkembangan Web 3.0 dan Pengaruhnya Bagi Developer
+                    </h4>
+                    <span
+                      class="text-gray-400 text-[11px] font-bold uppercase mt-auto"
+                      >SOFTWARE</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <!-- Right Actions -->
+          <div class="flex items-center gap-4 xl:gap-6 h-full">
+            <a
+              href="category.html?type=Teknologi"
+              class="flex items-center gap-2 bg-[#FFDF00] text-black font-bold px-4 xl:px-6 py-2 rounded-[8px] hover:bg-[#F0C800] transition-colors shadow-sm text-sm"
+            >
+              <svg
+                class="w-4 h-4 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+              Newsletter
+            </a>
+            <div class="flex items-center gap-3 text-[#1B3A7A]">
+              <button class="hover:text-[#C9A227] transition-colors">
+                <svg
+                  class="w-5 h-5 xl:w-[22px] xl:h-[22px]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  ></path>
+                </svg>
+              </button>
+              <button class="hover:text-[#C9A227] transition-colors">
+                <svg
+                  class="w-5 h-5 xl:w-[22px] xl:h-[22px]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </button>
+              <button class="hover:text-[#C9A227] transition-colors">
+                <svg
+                  class="w-5 h-5 xl:w-[22px] xl:h-[22px]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Mobile action icons (search + theme) -->
+        <div class="lg:hidden flex items-center gap-3 text-[#1B3A7A]">
+          <button class="hover:text-[#C9A227] transition-colors p-1">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+          </button>
+          <button class="hover:text-[#C9A227] transition-colors p-1">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========== MOBILE QUICK-LINKS PILL BAR ========== -->
+    <div
+      class="lg:hidden bg-white border-b border-gray-100 px-4 py-2.5 sticky top-[60px] z-40"
+    >
+      <div class="flex gap-2 overflow-x-auto scrollbar-hide pb-0.5">
+        <a href="#" class="quick-links-pill active">Beranda</a>
+        <a href="category.html?type=Ekonomi" class="quick-links-pill">Ekonomi</a>
+        <a href="category.html?type=Bisnis" class="quick-links-pill">Bisnis</a>
+        <a href="category.html?type=Teknologi" class="quick-links-pill">Teknologi</a>
+        <a href="#" class="quick-links-pill">Pendidikan</a>
+        <a href="#" class="quick-links-pill">Sosial</a>
+        <a href="#" class="quick-links-pill">Global</a>
+        <a href="#" class="quick-links-pill">Opini</a>
+      </div>
+    </div>
+
+    <!-- Header Red Categories (desktop only) -->
+    <div
+      class="bg-foxizRed text-white text-xs font-bold uppercase tracking-wider relative z-40 hidden lg:block shadow-sm"
+    >
+      <div
+        class="max-w-[1440px] mx-auto px-6 flex justify-between items-center h-10"
+      >
+        <div
+          class="flex items-center flex-1 overflow-x-auto whitespace-nowrap scrollbar-hide py-2"
+        >
+          <div class="flex items-center text-white/95 mr-3">
+            <svg
+              class="w-4 h-4 mr-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+              ></path>
+            </svg>
+          </div>
+          <div class="flex items-center text-[11px]" id="ticker-links">
+            <a href="#" class="hover:text-black transition-colors">Opini</a
+            ><span class="text-white/40 mx-2 text-md font-light">/</span>
+            <a href="#" class="hover:text-black transition-colors">Ekonomi</a
+            ><span class="text-white/40 mx-2 text-md font-light">/</span>
+            <a href="#" class="hover:text-black transition-colors"
+              >Politik Dunia</a
+            ><span class="text-white/40 mx-2 text-md font-light">/</span>
+            <a href="#" class="hover:text-black transition-colors"
+              >Energi Hijau</a
+            ><span class="text-white/40 mx-2 text-md font-light">/</span>
+            <a href="#" class="hover:text-black transition-colors"
+              >Keamanan Global</a
+            ><span class="text-white/40 mx-2 text-md font-light">/</span>
+            <a href="#" class="hover:text-black transition-colors">Riset</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 text-white">
+          <a
+            href="https://www.youtube.com/@forestvofficial"
+            target="_blank"
+            class="hover:text-black transition-colors"
+            ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+              /></svg
+          ></a>
+          <a
+            href="https://www.instagram.com/forumstrategis.ps"
+            target="_blank"
+            class="hover:text-black transition-colors"
+            ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+              /></svg
+          ></a>
+          <a
+            href="https://whatsapp.com/channel/0029Vb8CeW0CXC3Jb4etLb0c"
+            target="_blank"
+            class="hover:text-black transition-colors"
+            ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              /></svg
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay (slide-in drawer) -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-[100] bg-black/60 hidden pointer-events-none opacity-0 transition-opacity duration-300"
+    >
+      <div
+        class="w-72 bg-white h-full shadow-2xl transform -translate-x-full transition-transform duration-300 flex flex-col pointer-events-auto"
+        id="mobile-menu-content"
+      >
+        <div
+          class="p-4 bg-[#1B3A7A] flex justify-between items-center text-white border-b-4 border-foxizRed"
+        >
+          <img
+            src="img/logo/logo.jpeg"
+            alt="FORES"
+            class="h-9 object-contain"
+          />
+          <button
+            id="close-menu-btn"
+            class="text-white hover:text-foxizGold p-1"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex-1 overflow-y-auto p-4 flex flex-col font-head font-bold text-[15px] text-slate-800"
+        >
+          <a
+            href="#"
+            class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:text-foxizRed transition-colors"
+            >Beranda</a
+          >
+          <a
+            href="#"
+            class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:text-foxizRed transition-colors"
+          >
+            Ekonomi
+            <svg
+              class="w-4 h-4 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:text-foxizRed transition-colors"
+          >
+            Bisnis
+            <svg
+              class="w-4 h-4 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:text-foxizRed transition-colors"
+          >
+            Teknologi
+            <svg
+              class="w-4 h-4 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:text-foxizRed transition-colors"
+            >Pendidikan</a
+          >
+          <a
+            href="#"
+            class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:text-foxizRed transition-colors"
+            >Nasional</a
+          >
+          <a
+            href="#"
+            class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:text-foxizRed transition-colors"
+            >Global Affairs</a
+          >
+          <a
+            href="#"
+            class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:text-foxizRed transition-colors"
+            >Opini</a
+          >
+          <!-- Newsletter CTA in mobile menu -->
+          <div class="mt-6">
+            <a
+              href="#"
+              class="flex items-center justify-center gap-2 w-full bg-[#FFDF00] text-black font-bold py-3 rounded-lg hover:bg-[#F0C800] transition-colors"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+              Newsletter
+            </a>
+          </div>
+          <!-- Social links in menu -->
+          <div class="mt-6 flex gap-4 items-center">
+            <a
+              href="https://youtube.com/@forestvofficial"
+              target="_blank"
+              class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-[#1B3A7A] hover:bg-foxizRed hover:text-white transition-colors"
+              ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                /></svg
+            ></a>
+            <a
+              href="https://instagram.com/forumstrategis.ps"
+              target="_blank"
+              class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-[#1B3A7A] hover:bg-[#E1306C] hover:text-white transition-colors"
+              ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324z"
+                /></svg
+            ></a>
+            <a
+              href="https://whatsapp.com/channel/0029Vb8CeW0CXC3Jb4etLb0c"
+              target="_blank"
+              class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-[#1B3A7A] hover:bg-green-500 hover:text-white transition-colors"
+              ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="w-full">
+      <!-- 3. Foxiz-Style Hero Grid (3 Column) -->
+      <section class="max-w-[1440px] mx-auto px-4 lg:px-6 py-8">
+        <div class="flex flex-col lg:flex-row gap-5">
+          <div class="lg:w-1/4 flex-shrink-0" id="hero-left"></div>
+          <div class="lg:w-2/4" id="hero-center"></div>
+          <div class="lg:w-1/4">
+            <div class="flex items-center mb-6">
+              <h2
+                class="text-xl font-extrabold font-head text-slate-900 tracking-tight mr-2"
+              >
+                Most Read
+              </h2>
+              <span
+                class="text-foxizRed text-2xl font-bold italic block leading-none transform -skew-x-12"
+                >//</span
+              >
+            </div>
+            <div class="flex flex-col gap-0" id="most-read-container"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Banner -->
+      <section class="max-w-[1440px] mx-auto px-4 lg:px-6 mb-10">
+        <div
+          class="w-full bg-white rounded flex items-stretch border border-gray-200 overflow-hidden relative"
+        >
+          <!-- Dark strip -->
+          <div class="w-2 md:w-2.5 bg-[#0b1f3c] flex-shrink-0"></div>
+
+          <div
+            class="flex-1 py-5 px-6 md:px-8 flex flex-col lg:flex-row items-center gap-6 lg:gap-8"
+          >
+            <div class="flex items-center gap-5 lg:gap-8 lg:w-1/2">
+              <img
+                src="img/logo/logo.jpeg"
+                alt="FORES Logo"
+                class="h-16 md:h-20 flex-shrink-0 object-contain"
+              />
+              <p
+                class="text-slate-800 font-medium text-sm md:text-[15px] leading-relaxed flex-1"
+              >
+                Subscribe to our newsletter for real-time updates on new
+                articles, tips, and exclusive insights.
+              </p>
+            </div>
+
+            <div class="w-full lg:w-1/2 lg:flex lg:justify-end">
+              <form
+                class="flex w-full lg:max-w-md h-12"
+                onclick="event.preventDefault()"
+              >
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  class="flex-1 bg-white border border-gray-200 border-r-0 outline-none px-5 text-[15px] text-gray-700 rounded-l focus:border-[#0b1f3c] transition-colors h-full"
+                />
+                <button
+                  class="bg-[#0b1f3c] text-white font-medium font-head text-[15px] px-8 rounded-r hover:bg-slate-800 transition-colors h-full flex-shrink-0"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Section -->
+      <section
+        class="max-w-[1440px] mx-auto px-4 lg:px-6 py-10 border-t-2 border-foxizGray"
+      >
+        <div class="flex items-center mb-6">
+          <h2
+            class="text-2xl font-extrabold font-head text-slate-900 tracking-tight mr-2"
+          >
+            Featured
+          </h2>
+          <span
+            class="text-foxizRed text-3xl font-bold italic block leading-none transform -skew-x-12"
+            >//</span
+          >
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gap-y-10"
+          id="featured-container"
+        ></div>
+      </section>
+
+      <!-- Just In Section -->
+      <section
+        class="max-w-[1440px] mx-auto px-4 lg:px-6 py-10 border-t-2 border-foxizGray"
+      >
+        <div class="flex items-center mb-6">
+          <h2
+            class="text-2xl font-extrabold font-head text-slate-900 tracking-tight mr-2"
+          >
+            Baru Saja
+          </h2>
+          <span
+            class="text-foxizRed text-3xl font-bold italic block leading-none transform -skew-x-12"
+            >//</span
+          >
+        </div>
+        <div id="just-in-container" class="flex flex-col gap-6">
+          <!-- Top Horizontal Full-width -->
+          <div id="just-in-hero" class="w-full"></div>
+
+          <!-- Divider -->
+          <hr class="border-t border-dashed border-gray-200 w-full my-1" />
+
+          <!-- Bottom 3-column Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-6"
+            id="just-in-grid"
+          ></div>
+        </div>
+      </section>
+
+      <!-- Tech and Business Split -->
+      <section
+        class="max-w-[1440px] mx-auto px-4 lg:px-6 py-10 border-t-2 border-foxizGray"
+      >
+        <div class="flex flex-col lg:flex-row gap-8">
+          <!-- Tech -->
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-6">
+              <h2
+                class="text-2xl font-extrabold font-head text-slate-900 tracking-tight mr-2"
+              >
+                Teknologi
+              </h2>
+              <span
+                class="text-foxizRed text-3xl font-bold italic block leading-none transform -skew-x-12"
+                >//</span
+              >
+            </div>
+            <div class="flex flex-col gap-6" id="tech-container"></div>
+          </div>
+          <!-- Biz -->
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-6">
+              <h2
+                class="text-2xl font-extrabold font-head text-slate-900 tracking-tight mr-2"
+              >
+                Bisnis & Ekonomi
+              </h2>
+              <span
+                class="text-foxizRed text-3xl font-bold italic block leading-none transform -skew-x-12"
+                >//</span
+              >
+            </div>
+            <div class="flex flex-col gap-6" id="business-container"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What To Read -->
+      <section
+        class="max-w-[1440px] mx-auto px-4 lg:px-6 py-10 border-t-2 border-foxizGray bg-slate-50"
+      >
+        <div class="flex items-center mb-6">
+          <h2
+            class="text-2xl font-extrabold font-head text-slate-900 tracking-tight mr-2"
+          >
+            Yang Harus Anda Baca
+          </h2>
+          <span
+            class="text-foxizRed text-3xl font-bold italic block leading-none transform -skew-x-12"
+            >//</span
+          >
+        </div>
+        <div
+          class="flex flex-col lg:flex-row gap-6"
+          id="what-to-read-container"
+        ></div>
+      </section>
+
+      <!-- Horizontal Scroll Economy -->
+      <section
+        class="max-w-[1440px] mx-auto px-4 lg:px-6 py-10 border-t-2 border-foxizGray overflow-hidden"
+      >
+        <div class="flex items-center mb-6">
+          <h2
+            class="text-2xl font-extrabold font-head text-slate-900 tracking-tight mr-2"
+          >
+            Fokus Ekonomi
+          </h2>
+          <span
+            class="text-foxizRed text-3xl font-bold italic block leading-none transform -skew-x-12"
+            >//</span
+          >
+        </div>
+        <!-- Scrollable card row -->
+        <div class="relative">
+          <div
+            class="flex overflow-x-auto gap-5 pb-4 snap-x scrollbar-hide"
+            id="economy-container"
+          ></div>
+
+          <!-- Mobile scroll hint (visible on small screens) -->
+          <div class="lg:hidden flex items-center justify-between mt-3 px-1">
+            <!-- Left / Right buttons -->
+            <div class="flex gap-2">
+              <button
+                id="econ-scroll-left"
+                onclick="
+                  document
+                    .getElementById('economy-container')
+                    .scrollBy({ left: -260, behavior: 'smooth' })
+                "
+                class="w-9 h-9 rounded-full bg-slate-100 hover:bg-foxizRed hover:text-white text-slate-500 flex items-center justify-center transition-colors shadow-sm border border-gray-200"
+                aria-label="Geser kiri"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M15 19l-7-7 7-7"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                id="econ-scroll-right"
+                onclick="
+                  document
+                    .getElementById('economy-container')
+                    .scrollBy({ left: 260, behavior: 'smooth' })
+                "
+                class="w-9 h-9 rounded-full bg-foxizRed text-white hover:bg-red-700 flex items-center justify-center transition-colors shadow-sm"
+                aria-label="Geser kanan"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Swipe hint label -->
+            <span
+              class="flex items-center gap-1.5 text-[11px] font-bold text-gray-400 uppercase tracking-widest"
+            >
+              <svg
+                class="w-4 h-4 text-foxizRed"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 16l-4-4m0 0l4-4m-4 4h18"
+                ></path>
+              </svg>
+              Geser untuk lihat lebih
+              <svg
+                class="w-4 h-4 text-foxizRed"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                ></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fokus Bisnis Section -->
+      <section
+        class="max-w-[1440px] mx-auto px-4 lg:px-6 py-10 border-t-2 border-foxizGray"
+      >
+        <div class="flex items-center mb-6">
+          <h2
+            class="text-2xl font-extrabold font-head text-slate-900 tracking-tight mr-2"
+          >
+            Fokus Bisnis & Teknologi
+          </h2>
+          <span
+            class="text-foxizRed text-3xl font-bold italic block leading-none transform -skew-x-12"
+            >//</span
+          >
+        </div>
+        <div id="business-focus-container" class="flex flex-col gap-8">
+          <!-- Top Row: 2 cols -->
+          <div
+            id="business-focus-top"
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10"
+          ></div>
+
+          <!-- Divider -->
+          <hr class="border-t border-dashed border-gray-200 w-full my-0" />
+
+          <!-- Bottom Row: 3 cols -->
+          <div
+            id="business-focus-bottom"
+            class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
+          ></div>
+        </div>
+      </section>
+
+      <!-- More News Matrix -->
+      <section
+        class="bg-foxizDark py-16 mt-8 relative border-t-4 border-foxizRed"
+      >
+        <div class="max-w-[1440px] mx-auto px-4 lg:px-6 relative z-10">
+          <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 border-b border-gray-800 pb-4"
+          >
+            <div>
+              <h2
+                class="text-3xl lg:text-4xl font-extrabold font-head text-white mb-2 leading-tight tracking-tight"
+              >
+                Lebih Banyak Berita <br />
+                Terkini
+              </h2>
+              <p class="text-gray-400 font-medium max-w-lg">
+                Dari masalah kebijakan sosial hingga perkembangan digital
+                nasional modern, FORES meliput semuanya secara mendalam.
+              </p>
+            </div>
+            <a
+              href="#"
+              class="mt-4 md:mt-0 bg-foxizRed hover:bg-red-700 text-white font-bold px-6 py-3 rounded text-sm transition-colors flex items-center group"
+            >
+              Jelajahi Sekarang
+              <svg
+                class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-10"
+            id="more-news-container"
+          ></div>
+        </div>
+      </section>
+    </main>
+    <!-- Advanced Footer Design -->
+    <footer
+      class="bg-[#050714] border-t-8 border-foxizDark pt-16 pb-8 font-medium"
+    >
+      <div class="max-w-[1440px] mx-auto px-4 lg:px-6">
+        <!-- Main Footer Grid -->
+        <div class="flex flex-col lg:flex-row gap-16 xl:gap-24 mb-14">
+          <!-- Left Column: Trust Info & Form -->
+          <div class="w-full lg:w-[45%]">
+            <p class="text-[17px] text-white font-medium leading-relaxed mb-6">
+              <span class="font-bold">Information You Can Trust:</span> Stay
+              instantly connected with breaking stories and live updates. Dari
+              kebijakan sosial, pembangunan manusia, teknologi, hingga berita
+              bisnis modern, kami menyediakan analitik yang dapat Anda percaya.
+              Sekretariat Nasional Forum Strategis Pembangunan Sosial (FORES).
+            </p>
+            <form
+              class="flex flex-col gap-4 mt-8"
+              onclick="event.preventDefault()"
+            >
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="w-full bg-transparent border border-gray-700 outline-none px-6 py-4 text-white rounded focus:border-foxizRed transition-colors"
+              />
+              <button
+                class="bg-foxizRed text-white font-bold font-head text-lg px-8 py-4 rounded hover:bg-red-700 transition-colors w-full sm:w-auto self-start shadow-md"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Column: Links -->
+          <div class="w-full lg:w-[55%] pt-2">
+            <!-- Group 1 -->
+            <div class="mb-10">
+              <h3
+                class="text-white/50 text-sm font-semibold mb-6 tracking-wider uppercase"
+              >
+                <span class="text-xs mr-2">✦✦✦</span> Kategori Teratas
+              </h3>
+              <ul
+                class="flex flex-wrap text-white text-[15px] font-bold leading-loose gap-x-5 gap-y-3"
+              >
+                <li class="hover:text-foxizRed transition-colors">
+                  <a href="#">Fokus Ekonomi</a>
+                </li>
+                <span class="text-gray-700">|</span>
+                <li class="hover:text-foxizRed transition-colors">
+                  <a href="#">Teknologi & startup</a>
+                </li>
+                <span class="text-gray-700">|</span>
+                <li class="hover:text-foxizRed transition-colors">
+                  <a href="#">Kebijakan Sosial</a>
+                </li>
+                <span class="text-gray-700">|</span>
+                <li class="hover:text-foxizRed transition-colors">
+                  <a href="#">Infrastruktur</a>
+                </li>
+                <span class="text-gray-700">|</span>
+                <li class="hover:text-foxizRed transition-colors">
+                  <a href="#">Pendidikan</a>
+                </li>
+                <span class="text-gray-700">|</span>
+                <li class="hover:text-foxizRed transition-colors">
+                  <a href="#">Global Affairs</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Group 2 -->
+            <div>
+              <h3
+                class="text-white/50 text-sm font-semibold mb-6 tracking-wider uppercase"
+              >
+                <span class="text-xs mr-2">✦✦✦</span> Hubungi Kami
+              </h3>
+              <ul
+                class="flex flex-wrap text-white text-[15px] font-bold leading-loose gap-x-5 gap-y-3"
+              >
+                <li class="hover:text-foxizRed transition-colors">
+                  <a
+                    href="https://whatsapp.com/channel/0029Vb8CeW0CXC3Jb4etLb0c"
+                    target="_blank"
+                    >WhatsApp Channel</a
+                  >
+                </li>
+                <span class="text-gray-700">|</span>
+                <li class="hover:text-foxizRed transition-colors">
+                  <a
+                    href="https://www.tiktok.com/@forumstrategis.ps"
+                    target="_blank"
+                    >TikTok</a
+                  >
+                </li>
+                <span class="text-gray-700">|</span>
+                <li class="hover:text-foxizRed transition-colors">
+                  <a href="mailto:forumstrategis.ps@gmail.com">Email Us</a>
+                </li>
+                <span class="text-gray-700">|</span>
+                <li class="hover:text-foxizRed transition-colors">
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <span class="text-gray-700">|</span>
+                <li class="hover:text-foxizRed transition-colors">
+                  <a href="#">Submit a Tip</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashed Divider -->
+        <div
+          class="w-full border-t border-dashed border-gray-800/80 mb-8"
+        ></div>
+
+        <!-- Copyright & Social Items placed at bottom -->
+        <div
+          class="flex flex-col-reverse md:flex-row justify-between items-center gap-6"
+        >
+          <div
+            class="text-sm text-gray-500 font-medium tracking-wide text-center md:text-left"
+          >
+            © 2026 Sekretariat Nasional Forum Strategis Pembangunan Sosial
+            (FORES). #IkhtiarMembangunNegeri. All Rights Reserved.
+          </div>
+          <div class="flex items-center gap-4 text-white">
+            <a
+              href="https://youtube.com/@forestvofficial"
+              target="_blank"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-foxizRed transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://instagram.com/forumstrategis.ps"
+              target="_blank"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#E1306C] transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://facebook.com/forumstrategispembanguannsosial"
+              target="_blank"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#1877F2] transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data/articles.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
