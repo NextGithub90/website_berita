@@ -1,6 +1,25 @@
 /* Custom Styles outside of Tailwind configs */
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&display=swap");
+
 :root {
   overflow-x: hidden;
+}
+
+/* ========================
+   NEWS CARD TITLE STYLES
+   Inter Tight 800 + Navy
+   ======================== */
+.news-title {
+  font-family: "Inter Tight", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  color: rgb(9, 54, 94);
+  line-height: 1.25;
+}
+.news-title-light {
+  font-family: "Inter Tight", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
 }
 /* Ticker Animation */
 .ticker-wrap {
@@ -80,23 +99,29 @@
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
-  padding: 6px 14px;
-  background: #f1f5f9;
-  border-radius: 99px;
-  font-size: 12px;
-  font-weight: 700;
-  color: #1b3a7a;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  transition:
-    background 0.2s,
-    color 0.2s;
+  padding: 0 8px 8px 8px;
+  font-size: 15px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  transition: color 0.2s;
   flex-shrink: 0;
+  font-family: inherit;
 }
-.quick-links-pill:hover,
+.quick-links-pill:hover {
+  color: #ffffff;
+}
 .quick-links-pill.active {
-  background: #ed1b24;
-  color: #fff;
+  color: #ffffff;
+}
+.quick-links-pill.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 8px;
+  right: 8px;
+  height: 3px;
+  background-color: #ed1b24;
 }
 
 /* Mobile card article list - thumb left, text right */

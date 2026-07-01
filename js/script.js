@@ -64,15 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
   function createCardHTML(article, layout = "grid") {
     if (layout === "hero-main") {
       return `
-                <a href="detail.html?id=${article.id}" class="group block w-full relative h-[450px] md:h-[550px] rounded-lg overflow-hidden shadow-sm">
-                    <img src="${article.image}" alt="${article.title}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 card-gradient"></div>
-                    <div class="absolute bottom-0 left-0 p-8 w-full z-10">
-                        <span class="inline-block bg-foxizRed text-white text-[11px] font-extrabold px-3 py-1 uppercase tracking-wider mb-4 rounded-sm shadow-md">${article.category}</span>
-                        <h2 class="text-white text-3xl md:text-5xl font-extrabold font-head leading-tight mb-4 group-hover:text-foxizGold transition-colors drop-shadow-md">${article.title}</h2>
-                        <div class="flex items-center text-gray-200 text-sm font-semibold tracking-wide">
-                            <span class="text-foxizGold uppercase">${article.author}</span>
-                            <span class="mx-3 opacity-50">/</span>
+                <a href="detail.html?id=${article.id}" class="group block w-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-full aspect-[16/10] overflow-hidden relative">
+                        <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="flex flex-col p-5 md:p-8 bg-white">
+                        <span class="inline-block text-foxizRed text-[12px] font-extrabold uppercase tracking-widest mb-3">${article.category}</span>
+                        <h2 class="news-title text-3xl md:text-[38px] leading-[1.25] mb-4">${article.title}</h2>
+                        <div class="flex items-center text-gray-500 text-sm font-bold tracking-wide uppercase">
                             <span>${article.date}</span>
                         </div>
                     </div>
@@ -80,102 +79,104 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
     } else if (layout === "hero-side") {
       return `
-                <a href="detail.html?id=${article.id}" class="group block mb-6">
-                    <div class="w-full aspect-[4/3] rounded-md overflow-hidden mb-4 relative">
+                <a href="detail.html?id=${article.id}" class="group block mb-6 bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-full aspect-[4/3] overflow-hidden relative">
                         <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="flex flex-col">
+                    <div class="flex flex-col p-3">
                         <div class="flex items-center mb-2">
                             <span class="text-foxizRed text-[11px] font-extrabold uppercase tracking-wider">${article.category}</span>
                             <span class="mx-2 text-gray-300">|</span>
                             <span class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider">${article.date}</span>
                         </div>
-                        <h3 class="text-xl font-extrabold font-head leading-snug text-slate-900 group-hover:text-foxizBlue transition-colors mb-2 line-clamp-3 tracking-tight">${article.title}</h3>
+                        <h3 class="news-title text-xl leading-snug mb-2 line-clamp-3">${article.title}</h3>
                     </div>
                 </a>
             `;
     } else if (layout === "most-read") {
       return `
-                <a href="detail.html?id=${article.id}" class="flex gap-4 group items-start py-4 border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors">
+                <a href="detail.html?id=${article.id}" class="flex gap-4 group items-start py-4 border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors rounded-lg px-2">
                     <div class="w-8 h-8 rounded-full bg-foxizRed text-white flex-shrink-0 flex items-center justify-center font-extrabold font-head text-lg shadow-sm">
                         ${article._indexCounter}
                     </div>
                     <div class="flex-1">
-                        <h4 class="font-extrabold font-head text-slate-800 leading-snug text-[15px] group-hover:text-foxizBlue transition-colors tracking-tight line-clamp-3">${article.title}</h4>
+                        <h4 class="news-title text-[15px] leading-snug line-clamp-3" style="color:rgb(9,54,94)">${article.title}</h4>
                         <div class="mt-2 text-[10px] text-gray-500 font-bold uppercase tracking-wider">${article.date}</div>
                     </div>
-                    <div class="w-[80px] h-[60px] rounded overflow-hidden flex-shrink-0 shadow-sm">
+                    <div class="w-[80px] h-[60px] rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
                          <img src="${article.image}" alt="thumb" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
                     </div>
                 </a>
             `;
     } else if (layout === "grid") {
       return `
-                <a href="detail.html?id=${article.id}" class="group block">
-                    <div class="w-full aspect-[4/3] rounded-md overflow-hidden mb-4 relative shadow-sm">
+                <a href="detail.html?id=${article.id}" class="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-full aspect-[4/3] overflow-hidden relative">
                         <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="flex flex-col">
+                    <div class="flex flex-col p-3">
                         <span class="text-foxizRed text-[11px] font-extrabold uppercase tracking-wider mb-2 block">${article.category}</span>
-                        <h3 class="text-lg font-extrabold font-head leading-snug text-slate-900 group-hover:text-foxizBlue transition-colors mb-2 tracking-tight line-clamp-2">${article.title}</h3>
+                        <h3 class="news-title text-lg leading-snug mb-2 line-clamp-2">${article.title}</h3>
                         <p class="text-[11px] text-gray-500 font-bold uppercase tracking-widest mt-1">${article.date}</p>
                     </div>
                 </a>
             `;
     } else if (layout === "horizontal-list") {
       return `
-                <a href="detail.html?id=${article.id}" class="flex gap-5 group items-start pb-5 border-b border-gray-100 last:border-0">
-                    <div class="w-32 aspect-square rounded-md overflow-hidden shadow-sm flex-shrink-0">
+                <a href="detail.html?id=${article.id}" class="flex gap-5 group items-start pb-5 border-b border-gray-100 last:border-0 rounded-lg hover:bg-gray-50 transition-colors px-2 py-3">
+                    <div class="w-32 aspect-square rounded-lg overflow-hidden shadow-sm flex-shrink-0">
                          <img src="${article.image}" alt="thumb" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="flex-1">
                         <span class="text-foxizRed text-[10px] font-extrabold uppercase tracking-wider mb-2 block">${article.category}</span>
-                        <h4 class="font-extrabold font-head text-slate-800 leading-snug text-lg group-hover:text-foxizBlue transition-colors tracking-tight line-clamp-2 mb-2">${article.title}</h4>
+                        <h4 class="news-title text-lg leading-snug line-clamp-2 mb-2">${article.title}</h4>
                         <p class="text-[11px] text-gray-500 font-bold uppercase tracking-widest">${article.date}</p>
                     </div>
                 </a>
             `;
     } else if (layout === "economy") {
       return `
-                <a href="detail.html?id=${article.id}" class="group block w-72 flex-shrink-0 bg-white rounded-md border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
+                <a href="detail.html?id=${article.id}" class="group block w-72 flex-shrink-0 bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <div class="w-full h-44 overflow-hidden relative">
                         <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-5">
                         <span class="text-foxizRed text-[10px] font-extrabold uppercase tracking-wider mb-2 block">${article.category}</span>
-                        <h3 class="font-extrabold font-head leading-snug text-slate-800 group-hover:text-foxizBlue transition-colors tracking-tight line-clamp-3 mb-3">${article.title}</h3>
+                        <h3 class="news-title leading-snug line-clamp-3 mb-3">${article.title}</h3>
                         <p class="text-[11px] text-gray-500 font-bold uppercase tracking-widest">${article.date}</p>
                     </div>
                 </a>
             `;
     } else if (layout === "dark-grid") {
       return `
-                <a href="detail.html?id=${article.id}" class="group flex flex-col md:flex-row gap-5 items-start">
-                    <div class="w-full md:w-32 aspect-[4/3] rounded overflow-hidden flex-shrink-0">
-                        <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <a href="detail.html?id=${article.id}" class="group flex flex-col md:flex-row gap-5 items-start bg-white rounded-xl p-3 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-full md:w-32 aspect-[4/3] rounded-xl overflow-hidden flex-shrink-0 relative">
+                        <img src="${article.image}" alt="${article.title}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="flex-1">
-                        <span class="text-foxizGold text-[10px] font-extrabold uppercase tracking-wider mb-2 block">${article.category}</span>
-                        <h4 class="font-extrabold font-head text-white leading-snug text-lg group-hover:text-foxizGold transition-colors tracking-tight line-clamp-2 mb-2">${article.title}</h4>
-                        <p class="text-[11px] text-gray-400 font-bold uppercase tracking-wider">${article.date}</p>
+                    <div class="flex-1 py-1">
+                        <span class="text-foxizRed text-[10px] font-extrabold uppercase tracking-wider mb-2 block">${article.category}</span>
+                        <h4 class="news-title text-lg leading-snug line-clamp-2 mb-2 transition-colors">${article.title}</h4>
+                        <p class="text-[11px] text-gray-500 font-bold uppercase tracking-wider">${article.date}</p>
                     </div>
                 </a>
             `;
     } else if (layout === "just-in-overlay") {
       return `
-                <a href="detail.html?id=${article.id}" class="group block w-full relative aspect-[4/3] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <img src="${article.image}" alt="${article.title}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-5 w-full z-10 flex flex-col justify-end">
-                        <span class="inline-block text-foxizGold text-[11px] font-extrabold uppercase tracking-wider mb-2 drop-shadow">${article.category}</span>
-                        <h3 class="text-white text-lg lg:text-xl font-extrabold font-head leading-snug group-hover:text-foxizGold transition-colors drop-shadow-md tracking-tight line-clamp-2">${article.title}</h3>
+                <a href="detail.html?id=${article.id}" class="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-full aspect-[4/3] overflow-hidden relative">
+                        <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col p-4 bg-white">
+                        <span class="text-foxizRed text-[11px] font-extrabold uppercase tracking-wider mb-2 block">${article.category}</span>
+                        <h3 class="news-title text-lg lg:text-xl leading-snug line-clamp-2 mb-2">${article.title}</h3>
+                        <p class="text-[11px] text-gray-500 font-bold uppercase tracking-widest mt-1">${article.date}</p>
                     </div>
                 </a>
             `;
     } else if (layout === "just-in-full") {
       return `
-                <a href="detail.html?id=${article.id}" class="flex flex-col lg:flex-row gap-6 lg:gap-10 items-center group mb-2">
-                    <div class="w-full lg:w-[55%] aspect-[16/10] rounded-lg overflow-hidden shadow-sm relative">
+                <a href="detail.html?id=${article.id}" class="flex flex-col lg:flex-row gap-6 lg:gap-10 items-center group mb-2 rounded-xl overflow-hidden">
+                    <div class="w-full lg:w-[55%] aspect-[16/10] rounded-xl overflow-hidden shadow-sm relative">
                         <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="w-full lg:w-[45%] flex flex-col py-2 lg:py-6 lg:pr-8">
@@ -184,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <span class="mx-2.5 text-gray-300">|</span>
                             <span class="text-[12px] text-gray-500 font-bold tracking-widest">${article.date}</span>
                         </div>
-                        <h2 class="text-3xl lg:text-[40px] font-extrabold font-head leading-tight text-slate-900 group-hover:text-foxizBlue transition-colors tracking-tight line-clamp-3 mb-5">${article.title}</h2>
+                        <h2 class="news-title text-3xl lg:text-[40px] leading-tight line-clamp-3 mb-5">${article.title}</h2>
                         <p class="text-gray-500 font-medium text-sm lg:text-[15px] leading-relaxed line-clamp-3 group-hover:text-slate-700 transition-colors">
                             FORES (Forum Strategis Pembangunan Sosial) berkomitmen untuk terus menghadirkan analisis mendalam mengenai dinamika inovasi.
                         </p>
@@ -193,15 +194,14 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
     } else if (layout === "what-to-read-main") {
       return `
-                <a href="detail.html?id=${article.id}" class="group block w-full relative h-[450px] lg:h-full lg:min-h-[530px] rounded-lg overflow-hidden shadow-sm">
-                    <img src="${article.image}" alt="${article.title}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 card-gradient"></div>
-                    <div class="absolute bottom-0 left-0 p-8 w-full z-10">
-                        <span class="inline-block bg-foxizRed text-white text-[11px] font-extrabold px-3 py-1 uppercase tracking-wider mb-4 rounded-sm shadow-md">${article.category}</span>
-                        <h2 class="text-white text-3xl md:text-5xl font-extrabold font-head leading-tight mb-4 group-hover:text-foxizGold transition-colors drop-shadow-md tracking-tight">${article.title}</h2>
-                        <div class="flex items-center text-gray-200 text-sm font-semibold tracking-wide">
-                            <span class="text-foxizGold uppercase">${article.author}</span>
-                            <span class="mx-3 opacity-50">/</span>
+                <a href="detail.html?id=${article.id}" class="group block w-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative lg:h-full flex-col flex">
+                    <div class="w-full aspect-[16/10] lg:aspect-[4/3] overflow-hidden relative">
+                        <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="flex flex-col p-5 md:p-8 bg-white flex-1">
+                        <span class="inline-block text-foxizRed text-[12px] font-extrabold uppercase tracking-widest mb-3">${article.category}</span>
+                        <h2 class="news-title text-3xl md:text-[38px] leading-[1.25] mb-4">${article.title}</h2>
+                        <div class="flex items-center text-gray-500 text-sm font-bold tracking-wide uppercase mt-auto">
                             <span>${article.date}</span>
                         </div>
                     </div>
@@ -209,8 +209,8 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
     } else if (layout === "business-top") {
       return `
-                <a href="detail.html?id=${article.id}" class="flex flex-col lg:flex-row gap-5 lg:gap-6 group items-start lg:items-center">
-                    <div class="w-full lg:w-[45%] aspect-[16/10] rounded-lg overflow-hidden flex-shrink-0 relative shadow-sm border border-gray-100">
+                <a href="detail.html?id=${article.id}" class="flex flex-col lg:flex-row gap-5 lg:gap-6 group items-start lg:items-center rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow p-3">
+                    <div class="w-full lg:w-[45%] aspect-[16/10] rounded-xl overflow-hidden flex-shrink-0 relative">
                          <img src="${article.image}" alt="thumb" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="w-full lg:w-[55%] flex flex-col py-1">
@@ -218,18 +218,18 @@ document.addEventListener("DOMContentLoaded", () => {
                             <span class="text-foxizRed text-[11px] font-extrabold uppercase tracking-widest">${article.category} <span class="mx-1.5 text-gray-300">|</span> <span class="text-gray-500 font-bold">${article.date}</span></span>
                             <span class="text-gray-400 group-hover:text-foxizBlue transition-colors"><svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg></span>
                         </div>
-                        <h4 class="font-extrabold font-head text-slate-900 leading-snug text-[22px] lg:text-[28px] group-hover:text-foxizBlue transition-colors tracking-tight line-clamp-3 mb-2">${article.title}</h4>
+                        <h4 class="news-title text-[22px] lg:text-[28px] leading-snug line-clamp-3 mb-2">${article.title}</h4>
                     </div>
                 </a>
             `;
     } else if (layout === "business-bottom") {
       return `
-                <a href="detail.html?id=${article.id}" class="flex gap-4 lg:gap-5 group items-center">
-                    <div class="w-[72px] h-[72px] md:w-[94px] md:h-[94px] rounded-full overflow-hidden shadow-sm flex-shrink-0 border border-gray-100">
+                <a href="detail.html?id=${article.id}" class="flex gap-4 lg:gap-5 group items-center rounded-xl p-2 hover:bg-gray-50 transition-colors">
+                    <div class="w-[72px] h-[72px] md:w-[94px] md:h-[94px] rounded-xl overflow-hidden shadow-sm flex-shrink-0">
                          <img src="${article.image}" alt="thumb" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="flex-1 min-w-0 pr-2">
-                        <h4 class="font-extrabold font-head text-slate-900 leading-snug text-[15px] lg:text-[17px] group-hover:text-foxizBlue transition-colors tracking-tight line-clamp-3 mb-2.5">${article.title}</h4>
+                        <h4 class="news-title text-[15px] lg:text-[17px] leading-snug line-clamp-3 mb-2.5">${article.title}</h4>
                         <div class="flex items-center justify-between">
                            <span class="text-foxizRed text-[10px] md:text-[11px] font-extrabold uppercase tracking-widest block">${article.category}</span>
                            <span class="text-gray-300 group-hover:text-foxizBlue transition-colors flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg></span>
@@ -239,22 +239,21 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
     } else if (layout === "category-list-card") {
       return `
-                <a href="detail.html?id=${article.id}" class="flex flex-col lg:flex-row gap-5 lg:gap-8 group items-start lg:items-center relative">
-                    <div class="w-full lg:w-[45%] aspect-[16/10] lg:aspect-[4/3] rounded-lg overflow-hidden flex-shrink-0 relative shadow-sm border border-gray-100">
+                <a href="detail.html?id=${article.id}" class="flex flex-col lg:flex-row gap-5 lg:gap-8 group items-start lg:items-center relative rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow p-3">
+                    <div class="w-full lg:w-[45%] aspect-[16/10] lg:aspect-[4/3] rounded-xl overflow-hidden flex-shrink-0 relative">
                          <img src="${article.image}" alt="${article.title}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="w-full lg:w-[55%] flex flex-col py-2 lg:pr-2 block h-full">
-                        <div class="flex items-center mb-3 pr-2 lg:absolute lg:top-2 lg:right-2 z-10 w-full lg:w-auto justify-between lg:justify-end">
-                            <span class="text-foxizRed text-[11px] font-extrabold uppercase tracking-widest lg:hidden block">${article.category}</span>
+                        <div class="flex items-center mb-3 pr-2 z-10 w-full justify-between">
+                            <span class="text-foxizRed text-[11px] font-extrabold uppercase tracking-widest">${article.category}</span>
                             <span class="text-gray-300 group-hover:text-foxizRed transition-colors">
                               <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
                             </span>
                         </div>
-                        <span class="text-foxizRed text-[11px] font-extrabold uppercase tracking-widest hidden lg:block mb-2 pt-1">${article.category}</span>
                         <div class="flex items-center text-[12px] text-gray-400 font-bold uppercase tracking-widest mb-3 gap-2">
                             <span>${article.date}</span>
                         </div>
-                        <h4 class="font-extrabold font-head text-slate-900 leading-[1.35] text-[20px] lg:text-[25px] group-hover:text-[#1B3A7A] transition-colors tracking-tight line-clamp-3 mb-3">${article.title}</h4>
+                        <h4 class="news-title leading-[1.35] text-[20px] lg:text-[25px] line-clamp-3 mb-3">${article.title}</h4>
                     </div>
                 </a>
             `;

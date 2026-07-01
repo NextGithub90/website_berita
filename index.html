@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800&family=Manrope:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,6 +25,7 @@
             fontFamily: {
               sans: ["Inter", "sans-serif"],
               head: ["Manrope", "sans-serif"],
+              tight: ["Inter Tight", "sans-serif"],
             },
           },
         },
@@ -52,40 +53,29 @@
           rgba(0, 0, 0, 0) 100%
         );
       }
+      /* News card title: Inter Tight 800 + navy blue from reference */
+      .news-title {
+        font-family: "Inter Tight", Arial, sans-serif;
+        font-weight: 800;
+        color: rgb(9, 54, 94);
+      }
+      .news-title-light {
+        font-family: "Inter Tight", Arial, sans-serif;
+        font-weight: 800;
+        color: #ffffff;
+      }
     </style>
   </head>
   <body class="bg-white text-slate-800 antialiased overflow-x-hidden font-sans">
     <!-- ========== STICKY HEADER ========== -->
-    <header
-      class="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50"
-    >
+    <header class="bg-[#000097] shadow-sm sticky top-0 z-50">
       <div
         class="max-w-[1440px] mx-auto px-4 lg:px-6 h-[60px] lg:h-[90px] xl:h-[110px] flex items-center justify-between relative"
       >
-        <!-- LEFT: Hamburger (mobile only) -->
-        <button
-          class="lg:hidden text-[#1B3A7A] focus:outline-none flex-shrink-0 p-1"
-          id="mobile-menu-btn"
-        >
-          <svg
-            class="w-7 h-7"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2.5"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
-
-        <!-- CENTER: Logo (mobile) / LEFT logo (desktop) -->
+        <!-- LEFT: Logo -->
         <a
           href="index.html"
-          class="flex items-center h-full py-2 lg:py-3 mx-auto lg:mx-0 overflow-hidden"
+          class="flex items-center h-full py-2 lg:py-3 overflow-hidden"
         >
           <img
             src="img/logo/logo.jpeg"
@@ -100,17 +90,12 @@
         >
           <!-- Main Nav Links -->
           <nav
-            class="hidden lg:flex items-center space-x-1 xl:space-x-3 font-extrabold text-[14px] xl:text-[15px] tracking-wide text-[#1B3A7A] h-full"
+            class="hidden lg:flex items-center space-x-1 xl:space-x-3 font-extrabold text-[14px] xl:text-[15px] tracking-wide text-white h-full"
           >
             <a
               href="index.html"
               class="px-4 py-2 rounded-[8px] transition-colors text-sm hover:bg-[#050714] hover:text-white"
               >Home</a
-            >
-            <a
-              href="ekonomi.html"
-              class="px-4 py-2 rounded-[8px] transition-colors text-sm hover:bg-[#050714] hover:text-white"
-              >Ekonomi</a
             >
             <a
               href="bisnis.html"
@@ -147,11 +132,13 @@
               class="px-4 py-2 rounded-[8px] transition-colors text-sm hover:bg-[#050714] hover:text-white"
               >Advertorial</a
             >
+            <a href="#" class="px-4 py-2 rounded-[8px] transition-colors text-sm hover:bg-[#050714] hover:text-white">Daerah</a>
+            <a href="#" class="px-4 py-2 rounded-[8px] transition-colors text-sm hover:bg-[#050714] hover:text-white">Pendidikan</a>
           </nav>
 
           <!-- Right Actions -->
           <div class="flex items-center gap-4 xl:gap-6 h-full">
-            <div class="flex items-center gap-3 text-[#1B3A7A]">
+            <div class="flex items-center gap-3 text-white">
               <button class="hover:text-[#C9A227] transition-colors">
                 <svg
                   class="w-5 h-5 xl:w-[22px] xl:h-[22px]"
@@ -197,8 +184,8 @@
           </div>
         </div>
 
-        <!-- RIGHT: Mobile action icons (search + theme) -->
-        <div class="lg:hidden flex items-center gap-3 text-[#1B3A7A]">
+        <!-- RIGHT: Mobile action icons + hamburger -->
+        <div class="lg:hidden flex items-center gap-2 text-white">
           <button class="hover:text-[#C9A227] transition-colors p-1">
             <svg
               class="w-6 h-6"
@@ -221,13 +208,31 @@
               ></path>
             </svg>
           </button>
+          <button
+            class="text-white focus:outline-none flex-shrink-0 p-1"
+            id="mobile-menu-btn"
+          >
+            <svg
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
 
     <!-- ========== MOBILE QUICK-LINKS PILL BAR ========== -->
     <div
-      class="lg:hidden bg-white border-b border-gray-100 px-4 py-2.5 sticky top-[60px] z-40"
+      class="lg:hidden bg-[#000097] px-4 py-2.5 sticky top-[55px] sm:top-[60px] z-40"
     >
       <div class="flex gap-2 overflow-x-auto scrollbar-hide pb-0.5">
         <a href="#" class="quick-links-pill active">Beranda</a>
@@ -311,7 +316,7 @@
         class="w-72 bg-white h-full shadow-2xl transform -translate-x-full transition-transform duration-300 flex flex-col pointer-events-auto"
       >
         <div
-          class="p-4 bg-white flex justify-between items-center text-slate-800 border-b-4 border-foxizRed"
+          class="p-4 bg-[#000097] flex justify-between items-center text-white border-b-4 border-foxizRed"
         >
           <img
             src="img/logo/logo.jpeg"
@@ -349,11 +354,6 @@
             href="index.html"
             class="flex items-center justify-between py-3 border-b border-gray-100 hover:text-foxizRed transition-colors"
             >Home</a
-          >
-          <a
-            href="ekonomi.html"
-            class="flex items-center justify-between py-3 border-b border-gray-100 hover:text-foxizRed transition-colors"
-            >Ekonomi</a
           >
           <a
             href="bisnis.html"
@@ -712,20 +712,20 @@
 
       <!-- More News Matrix -->
       <section
-        class="bg-foxizDark py-16 mt-8 relative border-t-4 border-foxizRed"
+        class="bg-slate-50 py-16 mt-8 relative border-t-2 border-foxizGray"
       >
         <div class="max-w-[1440px] mx-auto px-4 lg:px-6 relative z-10">
           <div
-            class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 border-b border-gray-800 pb-4"
+            class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 border-b border-gray-200 pb-4"
           >
             <div>
               <h2
-                class="text-3xl lg:text-4xl font-extrabold font-head text-white mb-2 leading-tight tracking-tight"
+                class="text-3xl lg:text-4xl font-extrabold font-head text-slate-900 mb-2 leading-tight tracking-tight"
               >
                 Lebih Banyak Berita <br />
                 Terkini
               </h2>
-              <p class="text-gray-400 font-medium max-w-lg">
+              <p class="text-gray-500 font-medium max-w-lg">
                 Dari masalah kebijakan sosial hingga perkembangan digital
                 nasional modern, FORES meliput semuanya secara mendalam.
               </p>
