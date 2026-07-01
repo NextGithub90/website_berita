@@ -1,4 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Highlight active menu item based on current page
+  const currentPagePath =
+    window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll("header nav a").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href && href !== "#" && href.includes(currentPagePath)) {
+      link.classList.add("bg-[#050714]", "text-white");
+      link.classList.remove(
+        "hover:text-[#C9A227]",
+        "text-[#1B3A7A]",
+        "hover:bg-[#050714]",
+        "hover:text-white",
+      );
+    }
+  });
+
+  document.querySelectorAll("#mobile-menu-content a").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href && href !== "#" && href.includes(currentPagePath)) {
+      link.classList.add("text-foxizRed");
+    }
+  });
+
   // Mobile Menu Toggle
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const closeMenuBtn = document.getElementById("close-menu-btn");

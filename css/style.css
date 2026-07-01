@@ -1,5 +1,7 @@
 /* Custom Styles outside of Tailwind configs */
-
+:root {
+  overflow-x: hidden;
+}
 /* Ticker Animation */
 .ticker-wrap {
   width: 100%;
